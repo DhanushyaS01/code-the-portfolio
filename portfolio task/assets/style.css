@@ -1,0 +1,180 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#header {
+    background-color: #f8f9fa;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.about-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.progress-bar {
+    font-weight: bold;
+}
+
+.project-card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-card {
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+footer .social-icons a {
+    font-size: 24px;
+    transition: color 0.3s ease-in-out;
+}
+
+footer .social-icons a:hover {
+    color: #007bff;
+}
+
+/* Navigation bar */
+nav {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav .navbar-brand {
+    font-weight: bold;
+}
+
+nav .nav-link {
+    font-size: 1.1rem;
+    margin-right: 20px;
+}
+
+nav .btn-warning {
+    background-color: #ff5722;
+    border-color: #ff5722;
+}
+
+/* About Me Section Layout */
+#about .row {
+    display: flex;
+    align-items: center;
+}
+
+#about .col-md-4 {
+    text-align: center;
+}
+
+#about .col-md-8 {
+    padding-left: 30px; /* Adds space between image and content */
+}
+
+/* Skills Section - Cards Layout */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skill-card {
+    width: 100px;
+    height: 120px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    background-color: #007bff;
+    color: white;
+}
+
+.skill-card i {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.skill-card h5 {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Fade-in Effect */
+.fade-in {
+    animation: fadeInAnimation 2s ease-out;
+}
+
+/* Animation for fade-in */
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Slight upward movement */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fade-out Effect */
+.fade-out {
+    animation: fadeOutAnimation 1s ease-in forwards;
+}
+
+/* Animation for fade-out */
+@keyframes fadeOutAnimation {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-20px); /* Slight upward movement on fade out */
+    }
+}
+
+/* Button to trigger fade-out effect */
+#hideContentBtn {
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #header h1 {
+        font-size: 1.8rem;
+    }
+    #header p {
+        font-size: 0.9rem;
+    }
+
+    /* Adjust About Section for Mobile */
+    #about .row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #about .col-md-4, #about .col-md-8 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* Adjust Skills Layout for Mobile */
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
